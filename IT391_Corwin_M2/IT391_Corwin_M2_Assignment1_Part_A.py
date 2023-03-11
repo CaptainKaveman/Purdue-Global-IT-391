@@ -32,7 +32,7 @@ print(f'\nSorted List:\n{sorted_set}')
 
 print('\n*********** Section: 2 ***********')
 
-# Creating the empty list for book titels.
+# Creating the empty list for book titles.
 books = []
 
 
@@ -77,47 +77,12 @@ else:
 
 print('\n*********** Section: 3 ***********')
 
-# class Node:
-#   def __init__(self, data):
-#     self.left = None
+#class Node(object):
+#  def __init__(self, data):
+#    self.left = None
 #    self.right = None
 #    self.data = data
-#class BinaryTree:
-#  def insert(Node):
-
-
-
-#*********************************************************
-
-#****Assignment 1, Part B, Section 1
-
-#*********************************************************
-
-print('\n*********** Section: 1 ***********')
-
-mammals = []
-
-mammals.append('Bear')
-mammals.append('Gorilla')
-mammals.append('Tiger')
-mammals.append('Polar Bear')
-mammals.append('Lion')
-mammals.append('Monkey')
-
-#*********************************************************
-
-#****Assignment 1, Part B, Section 2
-
-#*********************************************************
-
-print('\n*********** Section: 2 ***********')
-
-#*********************************************************
-
-#****Assignment 1, Part B, Section 3
-
-#*********************************************************
-
-print('\n*********** Section: 3 ***********')
+#class BinaryTree(object):
+#  def __init__(self, root):
 
 #input()
