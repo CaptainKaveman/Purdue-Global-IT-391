@@ -75,14 +75,48 @@ else:
 
 #*********************************************************
 
-print('\n*********** Section: 3 ***********')
+print('\n*********** Section: 3 ***********\n')
 
-#class Node(object):
-#  def __init__(self, data):
-#    self.left = None
-#    self.right = None
-#    self.data = data
-#class BinaryTree(object):
-#  def __init__(self, root):
+# Creating the class to create a new node
+class Node(object):
+  def __init__(self, value):
+    self.value = value
+    self.left = None
+    self.right = None
 
-#input()
+# Creating a class for the construction and traversal of the binary tree.
+class BinaryTree(object):
+  def __init__(self, root):
+    self.root = Node(root)
+
+  # Function to call the function used to traverse the tree.
+  def printTree(self):
+    print(self.inorderPrint(tree.root, 'The contents of the binary tree are:\n'))
+  # Function used to traverse the tree.
+  def inorderPrint(self, start, traversal):
+    if start:
+      # Calling the print function and starting the traversal on the left child then the right if available.
+      traversal = self.inorderPrint(start.left, traversal)
+      traversal += (f'Traversed {str(start.value)}\n') # F-string to print the value traversed.
+      traversal = self.inorderPrint(start.right, traversal)
+    return traversal
+
+# Drawn out map of what the tree looks like.
+#    30
+#   /  \
+#  29  45
+# /   /
+#12  50
+
+# Creating the Root node for the tree.
+tree = BinaryTree(30)
+tree.root.left = Node(29)
+tree.root.left.left = Node(12)
+tree.root.right = Node(50)
+tree.root.right.left = Node(45)
+
+# Calling the function to print the traversed numbers
+tree.printTree()
+
+# Input prompt to keep the window open.
+input()
